@@ -2,7 +2,7 @@
  - download: https://github.com/leBluem/object_join_by_distance/releases/tag/0.1
  - Join selected objects by variable distance
  - optional: set origin to object
- - def. shortcut: J",
+ - def. shortcut: J
 
 ***How to install***
  - goto Blender -> Edit -> preferences -> addons
