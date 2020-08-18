@@ -16,5 +16,7 @@
  - set the minimal ***Distance*** in number field
  - check ***Set Origin to Object center first*** if object origin is somewhere else
 
+![Imgur Image](https://imgur.com/6s8Xv7k)
+
 ***History***
  - v0.1 initial version
