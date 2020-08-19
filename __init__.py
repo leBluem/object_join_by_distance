@@ -1,11 +1,11 @@
 bl_info = {
     "name": "Join Objects by distance",
     "author": "leBluem",
-    "version": (0, 1),
+    "version": (0, 2),
     "blender": (2, 80, 0),
     "description": "Join selected objects by variable distance, optional: set origin to object, def. shortcut: J",
-    "url": ""
-    "category": "Object"
+    "category": "Object",
+    "url": "https://github.com/leBluem/object_join_by_distance"
 }
 
 import bpy, sys, math
@@ -21,10 +21,10 @@ def join_objects(self, context):
         i2 = 0
         done = []
         joined = []
+        if self.setOriginToObject:
+            # bpy.data.objects[obj.name].origin_set(type='ORIGIN_CENTER_OF_MASS', center='MEDIAN')
+            bpy.ops.object.origin_set(type='ORIGIN_CENTER_OF_MASS', center='MEDIAN')
         for obj in bpy.context.selected_objects:
-            if self.setOriginToObject:
-                obj.origin_set(type='ORIGIN_CENTER_OF_MASS', center='MEDIAN')
-                # bpy.ops.object.origin_set(type='ORIGIN_CENTER_OF_MASS', center='MEDIAN')
             obj.select_set(False)
 
         for obj in selected_obj:
@@ -45,7 +45,6 @@ def join_objects(self, context):
                             obj.select_set(False)
                             # bpy.ops.object.join(bpy.data.objects[objINNER.name])
                             # selected_obj[0].name
-                            break
                     i2 += 1
             i1 += 1
 
