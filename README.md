@@ -21,3 +21,4 @@
 
 ***History***
  - v0.1 initial version
+ - v0.2 fixed script doing far too less, forgot to remove a break
